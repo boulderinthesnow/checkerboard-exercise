@@ -18,6 +18,7 @@ var colorFader = function(y) {
 	//return 3E3E + B5
 	// 3E3EB5
 }
+console.log (colorFader(5))
 
 var colorFader2 = function(y) {
 	var start = "#63AD"
