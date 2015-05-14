@@ -1,7 +1,14 @@
 // Your JS goes here
 
-var newLi = document.createElement("body")
-newLi.innerHTML = "butter"
+var randomColor = function () {
+	var chars = "0123456789ABCDEF".split('');
+	var start = '#'
+	for (var q = 0 ; q < 6 ; q++) {
+		start += chars[Math.floor(Math.random() * 16)];
+		console.log (start)
+	}
+	return start;
+}
 
 var black = function (){
 	var div = document.createElement('div')
@@ -9,7 +16,7 @@ var black = function (){
 	div.style.width = "11.1%"
 	div.style.float = "left"
 	div.style.paddingBottom = "11.1%"
-	div.style.backgroundColor = "black"
+	div.style.backgroundColor = randomColor()
 	document.body.appendChild(div)
 }
 
@@ -19,15 +26,17 @@ var red = function (){
 	div.style.width = "11.1%"
 	div.style.float = "left"
 	div.style.paddingBottom = "11.1%"
-	div.style.backgroundColor = "red"
+	div.style.backgroundColor = randomColor()
 	document.body.appendChild(div)
 }
+
+
+
+//console.log(randomColor())
 
 var lineOne = function() {
 	for (i = 0 ; i < 180 ; i++) {
 		arr = [];
-//		document.body.appendChild(arr.push (black()))
-//		document.body.appendChild(arr.push (red()))
 			arr.push (red())
 			arr.push (black())
 	}
